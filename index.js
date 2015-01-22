@@ -23,6 +23,18 @@ switch (process.env['NODE_ENV']) {
         logger = new (winston.Logger)();
         break;
 
+    case 'test' :
+        logger = new (winston.Logger)({
+            transports: [
+                new (winston.transports.Console)({
+                    level : 'error',
+                    colorize : true,
+                    silent : true
+                })
+            ]
+        });
+        break;
+
     case 'development' :
         logger = new (winston.Logger)({
             transports: [
