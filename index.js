@@ -69,6 +69,6 @@ switch (process.env['NODE_ENV']) {
         });
 }
 
-logger.cli();
+logger.cli && logger.cli();
 
 module.exports = logger;
