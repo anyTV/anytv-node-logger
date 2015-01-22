@@ -19,20 +19,10 @@ error
 winston.cli();
 
 switch (process.env['NODE_ENV']) {
-    case 'testing' :
-        logger = new (winston.Logger)();
-        break;
-
     case 'test' :
-        logger = new (winston.Logger)({
-            transports: [
-                new (winston.transports.Console)({
-                    level : 'error',
-                    colorize : true,
-                    silent : true
-                })
-            ]
-        });
+        logger = {
+            log : function () {}
+        };
         break;
 
     case 'development' :
