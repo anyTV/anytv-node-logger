@@ -1,6 +1,6 @@
 {
   "name": "anytv-node-logger",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "express winston wrapper",
   "main": "index.js",
   "scripts": {
@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/anyTV/anytv-node-logger",
   "dependencies": {
-    "winston": "^0.8.3"
+    "winston": "latest"
   }
 }

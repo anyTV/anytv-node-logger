@@ -1,3 +1,5 @@
+'use strict';
+
 var winston = require('winston'),
     logger;
 
@@ -18,7 +20,7 @@ error
 
 winston.cli();
 
-switch (process.env['NODE_ENV']) {
+switch (process.env.NODE_ENV) {
     case 'test' :
         logger = {
             log : function () {}
@@ -69,6 +71,8 @@ switch (process.env['NODE_ENV']) {
         });
 }
 
-logger.cli && logger.cli();
+if (logger.cli) {
+    logger.cli();
+}
 
 module.exports = logger;
